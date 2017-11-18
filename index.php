@@ -10,7 +10,6 @@
 <header id="masthead" class="site-header" role="banner">
 	<h1 class="site-title">Le titre de notre site</h1>
 	<p>Le slogan de notre site</p>
-	<?php wp_nav_menu(); ?>
 </header>
 <main class="site-content" id="#content" role="main">
 <?php if (have_posts()) : ?>
