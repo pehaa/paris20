@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Titre du site | Titre de la page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php wp_head(); ?>
