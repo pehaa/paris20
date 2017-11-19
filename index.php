@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php wp_head(); ?>
-</head>
-<body>
-<header id="masthead" class="site-header" role="banner">
-	<?php if ( has_custom_logo() ) {
-		the_custom_logo();
-	} else { ?>
-		<h1 class="site-title"><?php echo get_bloginfo( 'name' ); ?></h1>
-		<p><?php echo get_bloginfo( 'description' ); ?></p>
-	<?php } ?>
-	<?php wp_nav_menu(); ?>
-</header>
-<main class="site-content" id="#content" role="main">
+<?php get_header(); ?>
 <?php if (have_posts()) : ?>
 	<?php while (have_posts()) : the_post(); ?>
 		<article class="post" id="post-<?php the_ID(); ?>">
@@ -35,10 +18,4 @@
 <?php else : ?>
 	<h2>Aucun résultat.</h2>
 <?php endif; ?>
-</main>
-<footer class="site-footer">
-	Titre du site. © 2017
-</footer>
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>
