@@ -9,8 +9,12 @@
 <header id="masthead" class="site-header" role="banner">
 	<?php if ( has_custom_logo() ) {
 		the_custom_logo();
-	} else { ?>
-		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+	} else {
+		if ( is_front_page() && is_home() ) { ?>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<?php } else { ?>
+			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+		<?php } ?>		
 		<p><?php bloginfo( 'description' ); ?></p>
 	<?php } ?>
 	<?php wp_nav_menu(); ?>

@@ -71,3 +71,18 @@ if ( ! function_exists( 'paris20_content_width' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'paris20_content_width', 0 );
+
+if ( ! function_exists( 'paris20_style' ) ) :
+function paris20_style() {
+		/*
+		 * Charge le fichier style.css dans la partie head de chaque page
+		 * get_stylesheet_uri() - c'est l'adresse du fichier style.css
+		 */
+	wp_enqueue_style( 'paris20-style', get_stylesheet_uri() );
+}
+endif;
+		/*
+		 * On dit à WordPress de charger ce fichier au moment ou les
+		 * styles et scripts sont ajoutés
+		 */
+add_action( 'wp_enqueue_scripts', 'paris20_style' );
