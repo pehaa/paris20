@@ -10,8 +10,8 @@
 	<?php if ( has_custom_logo() ) {
 		the_custom_logo();
 	} else { ?>
-		<h1 class="site-title"><?php echo get_bloginfo( 'name' ); ?></h1>
-		<p><?php echo get_bloginfo( 'description' ); ?></p>
+		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+		<p><?php bloginfo( 'description' ); ?></p>
 	<?php } ?>
 	<?php wp_nav_menu(); ?>
 </header>
