@@ -17,6 +17,6 @@
 		<?php } ?>		
 		<p><?php bloginfo( 'description' ); ?></p>
 	<?php } ?>
-	<?php wp_nav_menu(); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'header_menu' ) ); ?>
 </header>
 <main class="site-content" id="#content" role="main">
