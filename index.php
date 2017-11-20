@@ -13,7 +13,7 @@
 		<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 		<p><?php bloginfo( 'description' ); ?></p>
 	<?php } ?>
-	<?php wp_nav_menu(); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'menu_header' ) ); ?>
 </header>
 <main class="site-content" id="#content" role="main">
 <?php if (have_posts()) : ?>
