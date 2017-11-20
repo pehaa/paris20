@@ -11,7 +11,7 @@
 			<p class="meta">Publié le <?php the_time(); ?> par <?php the_author(); ?></p>
 			<?php the_post_thumbnail(); ?>
 			<?php the_content( 'Lire la suite...' ); ?>
-			<p>Publié dans <?php the_category(); ?></p>
+			<p>Publié dans <?php the_category( ', ' ); ?></p>
 		</article>
 	<?php endwhile; ?>
 	<?php next_posts_link(); ?>
